@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Youtube, Linkedin, Instagram, MessageSquare, Mail, Phone, MapPin } from 'lucide-react';
-
+import { Link} from 'react-router-dom';
+ 
 const Footer = () => {
   const socialLinks = [
     { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
@@ -14,7 +13,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-card mt-20 border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About Section */}
           <div className="space-y-4">
