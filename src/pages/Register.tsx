@@ -24,20 +24,18 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen w-[100vw] overflow-hidden flex items-center justify-center px-4 bg-gray-900 text-white relative">
-      {/* Background grid effect */}
-      <div className="absolute inset-0 bg-black bg-opacity-30 bg-[radial-gradient(#3448ff33_1px,transparent_1px)] bg-[size:20px_20px] blur-[1px] -z-10"></div>
-
-      {/* Decorative elements */}
-      <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-cyan-600/10 rounded-full blur-3xl"></div>
-      <div className="absolute -top-16 -left-16 w-32 h-32 bg-purple-600/10 rounded-full blur-3xl"></div>
-
+    <div className="min-h-screen w-[100vw] overflow-x-hidden flex items-center justify-center px-4 md:py-8 bg-gray-900 text-white relative">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="w-full max-w-md space-y-8 relative z-10"
+        className="w-full max-w-4xl flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-8 relative z-10"
       >
-        <div className="text-center">
+        {/* Left Side - Heading and Text */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="w-full md:w-1/2 text-center md:text-left"
+        >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -45,7 +43,7 @@ const Register = () => {
           >
             Create Account
           </motion.h2>
-          <div className="h-1 w-40 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto mt-2 mb-6"></div>
+          <div className="h-1 w-40 bg-gradient-to-r from-cyan-500 to-cyan-700 mx-auto md:mx-0 mt-2 mb-6"></div>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,20 +52,21 @@ const Register = () => {
           >
             Join the gaming community
           </motion.p>
-        </div>
+        </motion.div>
 
+        {/* Right Side - Form */}
         <motion.form
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
           onSubmit={handleSubmit}
-          className="mt-8 space-y-6 relative border-2 border-cyan-500/50 rounded-lg overflow-hidden bg-gradient-to-br from-gray-900/90 to-gray-800/90 shadow-[0_0_20px_rgba(6,182,212,0.4)] backdrop-blur-sm p-8"
+          className="w-full md:w-1/2 mt-8 md:mt-0 space-y-6 relative border-2 border-cyan-500/50 rounded-lg overflow-hidden bg-gradient-to-br from-gray-900/90 to-gray-800/90 shadow-[0_0_20px_rgba(6,182,212,0.4)] backdrop-blur-sm p-8"
         >
           {/* Accent corner elements */}
           <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-cyan-400"></div>
-          <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-cyan-400"></div>
-          <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-cyan-400"></div>
-          <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-cyan-400"></div>
+              <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-cyan-400"></div>
+              <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-cyan-400"></div>
+              <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-cyan-400"></div>
 
           <div className="space-y-4">
             <div>
@@ -150,7 +149,7 @@ const Register = () => {
           <div>
             <button
               type="submit"
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-white bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 transition-all duration-300 shadow-[0_0_10px_rgba(6,182,212,0.5)]"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-white bg-gradient-to-r from-cyan-600 to-cyan-600 hover:from-cyan-500 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 transition-all duration-300 shadow-[0_0_10px_rgba(6,182,212,0.5)]"
             >
               Create Account
               <ArrowRight className="ml-2 h-5 w-5" />

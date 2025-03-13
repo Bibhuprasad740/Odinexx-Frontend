@@ -46,7 +46,7 @@ const NavBar = () => {
               <GamepadIcon className="h-8 w-8 text-cyan-300 group-hover:text-cyan-400 transition-colors duration-300" />
               <div className="absolute inset-0 bg-cyan-500 blur-lg opacity-50 group-hover:opacity-70 transition-all duration-300 -z-10"></div>
             </div>
-            <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 drop-shadow-[0_0_10px_rgba(6,182,212,0.5)]">
+            <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-700 drop-shadow-[0_0_10px_rgba(6,182,212,0.5)]">
               Odinexx
             </span>
           </Link>
@@ -66,10 +66,10 @@ const NavBar = () => {
                 }`}>
                   {item.name}
                 </span>
-                <span className={`absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 transform scale-x-0 ${
+                <span className={`absolute inset-0 bg-gradient-to-r from-cyan-600 to-cyan-600 transform scale-x-0 ${
                   activeItem === index ? 'scale-x-100' : ''
                 } transition-transform duration-300 origin-left rounded shadow-[0_0_10px_rgba(6,182,212,0.4)]`}></span>
-                <span className={`absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-cyan-400 to-blue-500 transform scale-x-0 ${
+                <span className={`absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-cyan-400 to-cyan-700 transform scale-x-0 ${
                   activeItem === null ? 'hover:scale-x-100' : ''
                 } transition-transform duration-300 origin-left shadow-[0_0_5px_rgba(6,182,212,0.6)]`}></span>
               </Link>
@@ -90,7 +90,7 @@ const NavBar = () => {
 
       {/* Mobile Navigation Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
+        className={`md:hidden  transition-all duration-300 ${
           isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >

@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, Trophy, Star, Shield, Gamepad, ArrowRight } from 'lucide-react';
+import { Users, Shield, Gamepad, ArrowRight } from 'lucide-react';
 
 const Teams = () => {
   const teams = [
@@ -52,7 +51,7 @@ const Teams = () => {
   ];
 
   return (
-    <div className="min-h-screen w-[100vw] overflow-hidden pt-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white relative">
+    <div className="min-h-screen w-[100vw] overflow-hidden pt-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white relative hero-pattern">
       {/* Background grid effect */}
       <div className="absolute inset-0 bg-black bg-opacity-30 bg-[radial-gradient(#3448ff33_1px,transparent_1px)] bg-[size:20px_20px] blur-[1px] -z-10"></div>
 
@@ -69,7 +68,7 @@ const Teams = () => {
           >
             Professional Teams
           </motion.h1>
-          <div className="h-1 w-40 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto mt-2 mb-6"></div>
+          <div className="h-1 w-40 bg-gradient-to-r from-cyan-500 to-cyan-700 mx-auto mt-2 mb-6"></div>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -103,7 +102,7 @@ const Teams = () => {
                       <Shield className="w-8 h-8 text-cyan-300" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">{team.name}</h3>
+                      <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-700">{team.name}</h3>
                       <div className="flex items-center mt-1">
                         <div className="px-2 py-1 rounded bg-cyan-900/30 border border-cyan-500/30 text-cyan-300 text-sm">
                           Rank: {team.rank}
@@ -142,7 +141,7 @@ const Teams = () => {
                   </div>
                 </div>
 
-                <button className="mt-6 w-full flex items-center justify-center px-4 py-3 rounded-md bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold tracking-wide transition-all duration-300 shadow-[0_0_10px_rgba(6,182,212,0.5)] border border-cyan-500/50">
+                <button className="mt-6 w-full flex items-center justify-center px-4 py-3 rounded-md bg-gradient-to-r from-cyan-600 to-cyan-600 hover:from-cyan-500 hover:to-cyan-700 text-white font-bold tracking-wide transition-all duration-300 shadow-[0_0_10px_rgba(6,182,212,0.5)] border border-cyan-500/50">
                   View Team Details
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </button>

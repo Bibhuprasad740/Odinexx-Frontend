@@ -37,7 +37,7 @@ const Leaderboard = () => {
           >
             Global Leaderboard
           </motion.h1>
-          <div className="h-1 w-40 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto mt-2 mb-6"></div>
+          <div className="h-1 w-40 bg-gradient-to-r from-cyan-500 to-cyan-700 mx-auto mt-2 mb-6"></div>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

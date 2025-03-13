@@ -7,9 +7,9 @@ import React from 'react'
 const LiveStreams = () => {
     const [activeStreamIndex, setActiveStreamIndex] = React.useState(0);
     return (
-        <div className="w-full mx-auto p-8 relative">
+        <div className="w-full mx-auto md:p-8 p-0 relative">
             {/* Background grid effect */}
-            <div className="absolute inset-0 bg-black bg-opacity-30 bg-[radial-gradient(#3448ff33_1px,transparent_1px)] bg-[size:20px_20px] blur-[1px] -z-10"></div>
+            <div className="absolute inset-0 bg-black md:bg-opacity-20 bg-opacity-0 bg-[radial-gradient(#3448ff33_1px,transparent_1px)] bg-[size:20px_20px] blur-[1px] -z-10"></div>
 
             {/* Decorative elements */}
             <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-cyan-600/10 rounded-full blur-3xl"></div>
@@ -18,7 +18,7 @@ const LiveStreams = () => {
             <div className="flex items-center justify-between mb-12">
                 <div className="relative">
                     <h2 className="text-4xl font-bold uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-purple-600 drop-shadow-[0_0_15px_rgba(236,72,153,0.6)]">LIVE STREAMS</h2>
-                    <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 mt-2"></div>
+                    <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-cyan-700 mt-2"></div>
                 </div>
 
                 <div className="flex space-x-3">

@@ -58,7 +58,7 @@ const Events = () => {
           >
             Upcoming Events
           </motion.h1>
-          <div className="h-1 w-40 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto mt-2 mb-6"></div>
+          <div className="h-1 w-40 bg-gradient-to-r from-cyan-500 to-cyan-700 mx-auto mt-2 mb-6"></div>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -101,7 +101,7 @@ const Events = () => {
                   <span className={`px-3 py-1 rounded text-xs font-bold ${
                     event.registrationStatus === 'Open'
                       ? 'bg-green-900/50 text-green-400 border border-green-500/50'
-                      : 'bg-blue-900/50 text-cyan-400 border border-cyan-500/50'
+                      : 'bg-cyan-700/50 text-cyan-400 border border-cyan-500/50'
                   }`}>
                     {event.registrationStatus}
                   </span>
@@ -109,7 +109,7 @@ const Events = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-2">{event.title}</h3>
+                <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-700 mb-2">{event.title}</h3>
 
                 <div className="space-y-3 mt-4">
                   <div className="flex items-center text-sm bg-cyan-900/20 p-2 rounded border border-cyan-500/20">
@@ -130,7 +130,7 @@ const Events = () => {
                   </div>
                 </div>
 
-                <button className="mt-6 w-full flex items-center justify-center px-4 py-3 rounded-md bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold tracking-wide transition-all duration-300 shadow-[0_0_10px_rgba(6,182,212,0.5)] border border-cyan-500/50">
+                <button className="mt-6 w-full flex items-center justify-center px-4 py-3 rounded-md bg-gradient-to-r from-cyan-600 to-cyan-600 hover:from-cyan-500 hover:to-cyan-700 text-white font-bold tracking-wide transition-all duration-300 shadow-[0_0_10px_rgba(6,182,212,0.5)] border border-cyan-500/50">
                   Register Now
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </button>

@@ -29,9 +29,10 @@ const Login = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="w-full max-w-md space-y-8 relative z-10"
+        className="w-full max-w-4xl flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-8 relative z-10"
       >
-        <div className="text-center">
+        {/* Left Side - Welcome Message */}
+        <div className="text-center md:text-left md:w-1/2">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -39,7 +40,7 @@ const Login = () => {
           >
             Welcome Back
           </motion.h2>
-          <div className="h-1 w-40 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto mt-2 mb-6"></div>
+          <div className="h-1 w-40 bg-gradient-to-r from-cyan-500 to-cyan-700 mx-auto md:mx-0 mt-2 mb-6"></div>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -50,12 +51,13 @@ const Login = () => {
           </motion.p>
         </div>
 
+        {/* Right Side - Login Form */}
         <motion.form
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
           onSubmit={handleSubmit}
-          className="mt-8 space-y-6 relative border-2 border-cyan-500/50 rounded-lg overflow-hidden bg-gradient-to-br from-gray-900/90 to-gray-800/90 shadow-[0_0_20px_rgba(6,182,212,0.4)] backdrop-blur-sm p-8"
+          className="w-full md:w-1/2 mt-8 md:mt-0 space-y-6 relative border-2 border-cyan-500/50 rounded-lg overflow-hidden bg-gradient-to-br from-gray-900/90 to-gray-800/90 shadow-[0_0_20px_rgba(6,182,212,0.4)] backdrop-blur-sm p-8"
         >
           {/* Accent corner elements */}
           <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-cyan-400"></div>
@@ -106,7 +108,7 @@ const Login = () => {
           <div>
             <button
               type="submit"
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-white bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 transition-all duration-300 shadow-[0_0_10px_rgba(6,182,212,0.5)]"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-white bg-gradient-to-r from-cyan-600 to-cyan-600 hover:from-cyan-500 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 transition-all duration-300 shadow-[0_0_10px_rgba(6,182,212,0.5)]"
             >
               Sign in
               <ArrowRight className="ml-2 h-5 w-5" />

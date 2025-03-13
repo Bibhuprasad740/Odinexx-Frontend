@@ -1,16 +1,9 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle, Users, Star, Share2, Trophy, Clock, Calendar } from 'lucide-react';
 
 const Stream = () => {
   return (
     <div className="min-h-screen w-[100vw] overflow-hidden pt-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white relative">
-      {/* Background grid effect */}
-      <div className="absolute inset-0 bg-black bg-opacity-30 bg-[radial-gradient(#3448ff33_1px,transparent_1px)] bg-[size:20px_20px] blur-[1px] -z-10"></div>
-      
-      {/* Decorative elements */}
-      <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-cyan-600/10 rounded-full blur-3xl"></div>
-      <div className="absolute -top-16 -left-16 w-32 h-32 bg-purple-600/10 rounded-full blur-3xl"></div>
 
       <div className="w-full mx-auto">
         <motion.div
@@ -21,7 +14,7 @@ const Stream = () => {
           <h1 className="text-4xl font-bold uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-purple-600 drop-shadow-[0_0_15px_rgba(236,72,153,0.6)]">
             ODINEXX CHAMPIONSHIP FINALS
           </h1>
-          <div className="h-1 w-40 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto mt-2 mb-2"></div>
+          <div className="h-1 w-40 bg-gradient-to-r from-cyan-500 to-cyan-700 mx-auto mt-2 mb-2"></div>
           <p className="text-cyan-300">LIVE NOW - TOP TEAMS BATTLE FOR GLORY</p>
         </motion.div>
 
@@ -41,13 +34,13 @@ const Stream = () => {
 
               <div className="aspect-video">
                 <iframe
-                  src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID"
+                  src="https://www.youtube.com/live/r-SzVQ9luHk?si=pzkYYCPJVaruK0pU"
                   title="Live Stream"
                   className="w-full h-full"
                   allowFullScreen
                 ></iframe>
               </div>
-              
+
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
@@ -87,7 +80,7 @@ const Stream = () => {
 
             <div className="p-4 border-b border-cyan-500/30">
               <div className="flex items-center justify-between">
-                <h2 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">LIVE CHAT</h2>
+                <h2 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-700">LIVE CHAT</h2>
                 <MessageCircle className="h-5 w-5 text-cyan-400" />
               </div>
             </div>
@@ -103,9 +96,9 @@ const Stream = () => {
                     <div>
                       <p className="text-sm font-medium text-cyan-300">Player_{index + 1}</p>
                       <p className="text-sm text-gray-300">
-                        {index % 3 === 0 ? "GG! That play was insane! 🔥" : 
-                         index % 3 === 1 ? "Team Alpha is dominating! 🏆" : 
-                         "What a comeback! 🎮"}
+                        {index % 3 === 0 ? "GG! That play was insane! 🔥" :
+                          index % 3 === 1 ? "Team Alpha is dominating! 🏆" :
+                            "What a comeback! 🎮"}
                       </p>
                     </div>
                   </div>
@@ -142,15 +135,15 @@ const Stream = () => {
           <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-cyan-400"></div>
 
           <div className="p-6">
-            <h2 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-4">TOURNAMENT DETAILS</h2>
-            
+            <h2 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-700 mb-4">TOURNAMENT DETAILS</h2>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <p className="text-gray-300 mb-4">
-                  Welcome to the Odinexx Championship Finals! Watch as the top teams battle it out for the grand prize and glory. 
+                  Welcome to the Odinexx Championship Finals! Watch as the top teams battle it out for the grand prize and glory.
                   Don't forget to follow our channel for more exciting tournaments and events.
                 </p>
-                
+
                 <div className="flex flex-wrap gap-3 mb-4">
                   <div className="bg-cyan-900/30 px-3 py-2 rounded border border-cyan-500/30 text-cyan-300 flex items-center">
                     <Trophy className="h-4 w-4 mr-2" />
@@ -166,7 +159,7 @@ const Stream = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h3 className="text-lg font-medium mb-3 text-cyan-300 flex items-center">
                   <Clock className="h-5 w-5 mr-2" />
@@ -186,13 +179,12 @@ const Stream = () => {
                       </div>
                       <div className="flex items-center gap-3">
                         <span className="text-gray-400">{item.time}</span>
-                        <span className={`px-2 py-0.5 rounded text-xs font-bold ${
-                          item.status === 'Live Now'
+                        <span className={`px-2 py-0.5 rounded text-xs font-bold ${item.status === 'Live Now'
                             ? 'bg-green-900/50 text-green-400 border border-green-500/50'
                             : item.status === 'Completed'
-                            ? 'bg-gray-900/50 text-gray-400 border border-gray-500/50'
-                            : 'bg-blue-900/50 text-cyan-400 border border-cyan-500/50'
-                        }`}>
+                              ? 'bg-gray-900/50 text-gray-400 border border-gray-500/50'
+                              : 'bg-cyan-700/50 text-cyan-400 border border-cyan-500/50'
+                          }`}>
                           {item.status}
                         </span>
                       </div>
@@ -203,7 +195,7 @@ const Stream = () => {
             </div>
           </div>
         </motion.div>
-        
+
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -211,7 +203,7 @@ const Stream = () => {
           transition={{ delay: 0.4 }}
           className="mt-8 flex justify-center"
         >
-          <button className="px-8 py-3 rounded-md bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold tracking-wide transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.5)] border border-cyan-500/50 uppercase">
+          <button className="px-8 py-3 rounded-md bg-gradient-to-r from-cyan-600 to-cyan-600 hover:from-cyan-500 hover:to-cyan-700 text-white font-bold tracking-wide transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.5)] border border-cyan-500/50 uppercase">
             Join Next Tournament
           </button>
         </motion.div>

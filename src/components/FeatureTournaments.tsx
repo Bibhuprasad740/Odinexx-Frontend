@@ -4,9 +4,9 @@ import featuredTournaments from '../data/featured_tournaments'
 
 const FeatureTournaments = () => {
     return (
-        <div className="w-full mx-auto p-8 relative">
+        <div className="w-full mx-auto md:p-8 p-0 relative">
             {/* Background grid effect */}
-            <div className="absolute inset-0 bg-black bg-opacity-30 bg-[radial-gradient(#3448ff33_1px,transparent_1px)] bg-[size:20px_20px] blur-[1px] -z-10"></div>
+            <div className="absolute inset-0 bg-black md:bg-opacity-20 bg-opacity-0 bg-[radial-gradient(#3448ff33_1px,transparent_1px)] bg-[size:20px_20px] blur-[1px] -z-10"></div>
 
             {/* Decorative elements */}
             <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-cyan-600/10 rounded-full blur-3xl"></div>
@@ -18,7 +18,7 @@ const FeatureTournaments = () => {
                 className="text-center mb-12"
             >
                 <h2 className="text-4xl font-bold uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-purple-600 drop-shadow-[0_0_15px_rgba(236,72,153,0.6)]">FEATURED TOURNAMENTS</h2>
-                <div className="h-1 w-40 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto mt-2 mb-6"></div>
+                <div className="h-1 w-40 bg-gradient-to-r from-cyan-500 to-cyan-700 mx-auto mt-2 mb-6"></div>
                 <p className="text-cyan-300 max-w-2xl mx-auto">Join our upcoming premium tournaments and compete for massive prize pools</p>
             </motion.div>
 
@@ -56,7 +56,7 @@ const FeatureTournaments = () => {
                                 <h3 className="text-xl font-bold text-white tracking-wide">{tournament.name}</h3>
                                 <span className={`px-3 py-1 rounded text-xs font-bold ${tournament.registrationStatus === 'Open'
                                         ? 'bg-green-900/50 text-green-400 border border-green-500/50'
-                                        : 'bg-blue-900/50 text-cyan-400 border border-cyan-500/50'
+                                        : 'bg-cyan-700/50 text-cyan-400 border border-cyan-500/50'
                                     }`}>
                                     {tournament.registrationStatus}
                                 </span>
@@ -73,7 +73,7 @@ const FeatureTournaments = () => {
 
                             <Link
                                 to={`/tournaments/${tournament.id}`}
-                                className="w-full block text-center py-3 rounded-md bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold tracking-wide transition-all duration-300 shadow-[0_0_10px_rgba(6,182,212,0.5)] border border-cyan-500/50"
+                                className="w-full block text-center py-3 rounded-md bg-gradient-to-r from-cyan-600 to-cyan-600 hover:from-cyan-500 hover:to-cyan-700 text-white font-bold tracking-wide transition-all duration-300 shadow-[0_0_10px_rgba(6,182,212,0.5)] border border-cyan-500/50"
                             >
                                 VIEW DETAILS
                             </Link>
