@@ -58,9 +58,9 @@ const NavBar = () => {
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 w-0 bg-cyan-500 group-hover:w-3/4 transition-all duration-300"></span>
               </Link>
             ))}
-            <button className="ml-4 px-4 py-2 rounded-lg bg-gradient-to-br from-cyan-600 to-cyan-700 text-white text-sm font-medium uppercase tracking-wider hover:from-cyan-500 hover:to-cyan-600 transition-all duration-300 shadow-lg shadow-cyan-500/20">
+            <Link to='/register' className="ml-4 px-4 py-2 rounded-lg bg-gradient-to-br from-cyan-600 to-cyan-700 text-white text-sm font-medium uppercase tracking-wider hover:from-cyan-500 hover:to-cyan-600 transition-all duration-300 shadow-lg shadow-cyan-500/20">
               Register
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Navigation Button */}

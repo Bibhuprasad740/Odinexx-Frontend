@@ -4,10 +4,10 @@ import players from '../data/players_data';
 
 const Leaderboard = () => {
   const getRankIcon = (rank: number) => {
-    if (rank === 1) return <Trophy className="h-6 w-6 text-yellow-500" />;
-    if (rank === 2) return <Medal className="h-6 w-6 text-gray-400" />;
-    if (rank === 3) return <Medal className="h-6 w-6 text-amber-700" />;
-    return <span className="text-lg font-bold">{rank}</span>;
+    if (rank === 1) return <Trophy className="h-5 w-5 text-yellow-400" />;
+    if (rank === 2) return <Medal className="h-5 w-5 text-gray-300" />;
+    if (rank === 3) return <Medal className="h-5 w-5 text-amber-500" />;
+    return <span className="text-sm font-medium">{rank}</span>;
   };
 
   const getTierColor = (tier: string) => {
@@ -20,86 +20,86 @@ const Leaderboard = () => {
   };
 
   return (
-    <div className="min-h-screen w-[100vw] overflow-hidden pt-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white relative">
-      {/* Background grid effect */}
-      <div className="absolute inset-0 bg-black bg-opacity-30 bg-[radial-gradient(#3448ff33_1px,transparent_1px)] bg-[size:20px_20px] blur-[1px] -z-10"></div>
-
-      {/* Decorative elements */}
-      <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-cyan-600/10 rounded-full blur-3xl"></div>
-      <div className="absolute -top-16 -left-16 w-32 h-32 bg-purple-600/10 rounded-full blur-3xl"></div>
-
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl font-bold uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-purple-600 drop-shadow-[0_0_15px_rgba(236,72,153,0.6)] mb-4"
-          >
-            Global Leaderboard
-          </motion.h1>
-          <div className="h-1 w-40 bg-gradient-to-r from-cyan-500 to-cyan-700 mx-auto mt-2 mb-6"></div>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-xl text-cyan-300"
-          >
-            Top players competing for glory
-          </motion.p>
-        </div>
-
+    <div className="min-h-screen w-full py-16 px-4 sm:px-6 lg:px-8 text-white relative overflow-hidden">
+      
+      <div className="max-w-7xl mt-8 mx-auto relative">
+        {/* Header section */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="relative border-2 border-cyan-500/50 rounded-lg overflow-hidden bg-gradient-to-br from-gray-900/90 to-gray-800/90 shadow-[0_0_20px_rgba(6,182,212,0.4)] backdrop-blur-sm"
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
         >
-          {/* Accent corner elements */}
-          <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-cyan-400"></div>
-          <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-cyan-400"></div>
-          <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-cyan-400"></div>
-          <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-cyan-400"></div>
+          <span className="text-cyan-500 text-sm font-medium tracking-wider uppercase">
+            Competitive Rankings
+          </span>
+          <h2 className="text-3xl font-bold mt-2 mb-4">Global Leaderboard</h2>
+          <div className="h-1 w-20 bg-cyan-500 mb-6 mx-auto"></div>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Top players competing for esports glory
+          </p>
+        </motion.div>
 
+        {/* Leaderboard table */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-gray-900/60 backdrop-blur-sm rounded-xl border border-gray-800 hover:border-cyan-500/40 transition-all duration-300 overflow-hidden"
+        >
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="border-b border-cyan-500/30">
-                  <th className="px-6 py-4 text-left text-cyan-300">Rank</th>
-                  <th className="px-6 py-4 text-left text-cyan-300">Player</th>
-                  <th className="px-6 py-4 text-left text-cyan-300">Score</th>
-                  <th className="px-6 py-4 text-left text-cyan-300">Wins</th>
-                  <th className="px-6 py-4 text-left text-cyan-300">Win Rate</th>
-                  <th className="px-6 py-4 text-left text-cyan-300">Tier</th>
+                <tr className="border-b border-gray-800">
+                  <th className="px-6 py-4 text-left text-sm font-medium text-cyan-300 uppercase tracking-wider">Rank</th>
+                  <th className="px-6 py-4 text-left text-sm font-medium text-cyan-300 uppercase tracking-wider">Player</th>
+                  <th className="px-6 py-4 text-left text-sm font-medium text-cyan-300 uppercase tracking-wider">Score</th>
+                  <th className="px-6 py-4 text-left text-sm font-medium text-cyan-300 uppercase tracking-wider">Wins</th>
+                  <th className="px-6 py-4 text-left text-sm font-medium text-cyan-300 uppercase tracking-wider">Win Rate</th>
+                  <th className="px-6 py-4 text-left text-sm font-medium text-cyan-300 uppercase tracking-wider">Tier</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="divide-y divide-gray-800">
                 {players.map((player, index) => (
                   <motion.tr
                     key={player.rank}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
                     transition={{ delay: index * 0.05 }}
-                    className="border-b border-cyan-500/20 hover:bg-cyan-900/10 transition-colors"
+                    className="hover:bg-gray-800/50 transition-colors"
                   >
-                    <td className="px-6 py-4">
-                      <div className="flex items-center justify-center w-8 h-8">
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center justify-center w-6 h-6">
                         {getRankIcon(player.rank)}
                       </div>
                     </td>
-                    <td className="px-6 py-4 font-medium text-white">{player.name}</td>
-                    <td className="px-6 py-4">
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center">
+                        <div className="flex-shrink-0 h-10 w-10 rounded-full bg-gray-800 border border-cyan-500/30 flex items-center justify-center mr-3">
+                          <span className="text-cyan-300 font-medium text-sm">
+                            {player.name.charAt(0)}
+                          </span>
+                        </div>
+                        <div>
+                          <div className="text-sm font-medium text-white">{player.name}</div>
+                          <div className="text-xs text-cyan-400">#{player.id}</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
                         <TrendingUp className="h-4 w-4 mr-2 text-cyan-300" />
                         <span className="text-white">{player.score}</span>
                       </div>
                     </td>
-                    <td className="px-6 py-4 text-white">{player.wins}</td>
-                    <td className="px-6 py-4 text-white">{player.winRate}</td>
-                    <td className="px-6 py-4">
-                      <span className={`flex items-center ${getTierColor(player.tier)}`}>
+                    <td className="px-6 py-4 whitespace-nowrap text-white">{player.wins}</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-white">{player.winRate}%</td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className={`flex items-center ${getTierColor(player.tier)}`}>
                         <Star className="h-4 w-4 mr-1" />
                         <span className="text-white">{player.tier}</span>
-                      </span>
+                      </div>
                     </td>
                   </motion.tr>
                 ))}

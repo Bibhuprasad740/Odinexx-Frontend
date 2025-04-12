@@ -17,11 +17,6 @@ const Home = () => {
         <HeroSection />
       </section>
 
-      {/* Stats Counter Section */}
-      <section className="relative z-10 py-12 px-4 sm:px-6 lg:px-8 bg-cyan-500/10 backdrop-blur-sm">
-        <StatsCounter />
-      </section>
-
       {/* Featured Tournaments */}
       <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <FeatureTournaments />
@@ -45,6 +40,11 @@ const Home = () => {
       {/* Features Section */}
       <section className="relative z-10 py-4 px-4 sm:px-6 lg:px-8">
         <Features />
+      </section>
+
+      {/* Stats Counter Section */}
+      <section className="relative z-10 py-12 px-4 sm:px-6 lg:px-8 bg-cyan-500/10 backdrop-blur-sm">
+        <StatsCounter />
       </section>
 
       {/* Call to Action */}

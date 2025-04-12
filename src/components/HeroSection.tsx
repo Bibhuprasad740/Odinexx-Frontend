@@ -11,7 +11,7 @@ const HeroSection = () => {
                 loop
                 muted
                 playsInline
-                className="absolute top-0 left-0 w-full h-full object-cover filter blur-lg md:opacity-15 opacity-10"
+                className="absolute top-0 left-0 w-full h-full object-cover filter blur-lg md:opacity-20 opacity-10"
             >
                 <source src="/assets/graphics1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

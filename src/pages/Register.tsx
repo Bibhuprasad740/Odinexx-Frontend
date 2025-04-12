@@ -25,6 +25,17 @@ const Register = () => {
 
   return (
     <div className="w-full mx-auto relative py-16 min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover filter blur-lg md:opacity-10 opacity-20"
+      >
+        <source src="/assets/graphics5.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div className="max-w-7xl mt-4 mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

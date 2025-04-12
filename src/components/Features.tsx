@@ -5,7 +5,17 @@ import features from '../data/features_data'
 const Features = () => {
     return (
         <div className="w-full mx-auto relative py-16">
-
+            {/* Background Video */}
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute top-0 left-0 w-full h-full object-cover filter blur-lg md:opacity-20 opacity-15"
+            >
+                <source src="/assets/graphics6.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
             {/* Section header with matching design */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -30,7 +40,7 @@ const Features = () => {
                     >
                         {/* Feature icon with gradient background */}
                         <div className="absolute -top-5 -right-5 w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-cyan-500/5 rounded-full blur-xl opacity-70 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        
+
                         {/* Card content */}
                         <div className="p-6">
                             <div className="flex items-center mb-4">
@@ -38,10 +48,10 @@ const Features = () => {
                                     <feature.icon className="h-6 w-6 text-cyan-400" />
                                 </div>
                             </div>
-                            
+
                             <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                             <p className="text-gray-400 mb-5">{feature.description}</p>
-                            
+
                             {/* Learn more link matching tournament cards */}
                             <Link
                                 to={feature.link || '#'}
@@ -59,8 +69,8 @@ const Features = () => {
 
             {/* Optional CTA matching tournaments component */}
             <div className="mt-12 text-center">
-                <Link 
-                    to="/register" 
+                <Link
+                    to="/register"
                     className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-medium transition-all duration-300 group"
                 >
                     Join Now

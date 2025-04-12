@@ -31,17 +31,6 @@ const FAQ = () => {
 
     return (
         <div className="max-w-4xl mx-auto py-20 px-4 relative overflow-hidden">
-            {/* Background Video */}
-            <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute top-0 left-0 object-cover filter blur-lg opacity-50"
-            >
-                <source src="/assets/graphics2.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
             {/* Animated circuit background lines */}
             <div className="absolute inset-0 z-0 opacity-10">
                 {[...Array(20)].map((_, i) => (
