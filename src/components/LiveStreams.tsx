@@ -1,100 +1,158 @@
-import { motion } from 'framer-motion'
-import { ChevronLeft, ChevronRight, Play, Users } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import streams from '../data/streams_data'
-import React from 'react'
+import { motion } from 'framer-motion';
+import { ChevronLeft, ChevronRight, Play, Users, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import streams from '../data/streams_data';
+import React from 'react';
 
 const LiveStreams = () => {
     const [activeStreamIndex, setActiveStreamIndex] = React.useState(0);
+
     return (
-        <div className="w-full mx-auto md:p-8 p-0 relative">
-            {/* Background grid effect */}
-            <div className="absolute inset-0 bg-black md:bg-opacity-20 bg-opacity-0 bg-[radial-gradient(#3448ff33_1px,transparent_1px)] bg-[size:20px_20px] blur-[1px] -z-10"></div>
-
-            {/* Decorative elements */}
-            <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-cyan-600/10 rounded-full blur-3xl"></div>
-            <div className="absolute -top-16 -left-16 w-32 h-32 bg-purple-600/10 rounded-full blur-3xl"></div>
-
-            <div className="flex items-center justify-between mb-12">
-                <div className="relative">
-                    <h2 className="text-4xl font-bold uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-purple-600 drop-shadow-[0_0_15px_rgba(236,72,153,0.6)]">LIVE STREAMS</h2>
-                    <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-cyan-700 mt-2"></div>
-                </div>
-
-                <div className="flex space-x-3">
-                    <button
-                        onClick={() => setActiveStreamIndex(Math.max(0, activeStreamIndex - 2))}
-                        className="p-2 rounded-lg hover:bg-cyan-900/50 transition-colors border-2 border-cyan-500/50 shadow-[0_0_15px_rgba(6,182,212,0.3)] disabled:opacity-50 disabled:cursor-not-allowed"
-                        disabled={activeStreamIndex === 0}
+        <div className="w-full mx-auto relative py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Section header with navigation controls */}
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                     >
-                        <ChevronLeft className="h-6 w-6 text-cyan-400" />
-                    </button>
-                    <button
-                        onClick={() => setActiveStreamIndex(Math.min(streams.length - 2, activeStreamIndex + 2))}
-                        className="p-2 rounded-lg hover:bg-cyan-900/50 transition-colors border-2 border-cyan-500/50 shadow-[0_0_15px_rgba(6,182,212,0.3)] disabled:opacity-50 disabled:cursor-not-allowed"
-                        disabled={activeStreamIndex >= streams.length - 2}
-                    >
-                        <ChevronRight className="h-6 w-6 text-cyan-400" />
-                    </button>
-                </div>
-            </div>
+                        <span className="text-cyan-500 text-sm font-medium tracking-wider uppercase">Streaming Now</span>
+                        <h2 className="text-3xl font-bold mt-2 mb-4">Live Streams</h2>
+                        <div className="h-1 w-20 bg-cyan-500 mb-6"></div>
+                        <p className="text-gray-400 max-w-2xl md:mb-0 mb-6">Watch your favorite players and tournaments in real-time</p>
+                    </motion.div>
 
-            <div className="overflow-hidden">
-                <div
-                    className="flex transition-transform duration-300 ease-in-out"
-                    style={{ transform: `translateX(-${activeStreamIndex * 50}%)` }}
-                >
-                    {streams.map((stream) => (
-                        <div
-                            key={stream.id}
-                            className="sm:min-w-[50%] min-w-full px-4"
+                    <div className="flex space-x-3">
+                        <button
+                            onClick={(event) => {
+                                event.stopPropagation();
+                                setActiveStreamIndex(Math.max(0, activeStreamIndex - 1));
+                            }}
+                            className="p-3 rounded-full hover:bg-gray-800/30 transition-colors border border-gray-700 hover:border-cyan-500/40 disabled:opacity-50 disabled:cursor-not-allowed"
+                            disabled={activeStreamIndex === 0}
                         >
-                            <Link to={`/stream/${stream.id}`}>
-                                <motion.div
-                                    whileHover={{ scale: 1.03, boxShadow: '0 0 30px rgba(6, 182, 212, 0.7)' }}
-                                    className="relative border-2 border-cyan-500/50 rounded-lg overflow-hidden bg-gradient-to-br from-gray-900/90 to-gray-800/90 shadow-[0_0_20px_rgba(6,182,212,0.4)] backdrop-blur-sm transition-all duration-300"
-                                >
-                                    {/* Accent corner elements */}
-                                    <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-cyan-400"></div>
-                                    <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-cyan-400"></div>
-                                    <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-cyan-400"></div>
-                                    <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-cyan-400"></div>
+                            <ChevronLeft className="h-5 w-5 text-cyan-400" />
+                        </button>
+                        <button
+                            onClick={(event) => {
+                                event.stopPropagation();
+                                setActiveStreamIndex(Math.min(streams.length - 1, activeStreamIndex + 1));
+                            }}
+                            className="p-3 rounded-full hover:bg-gray-800/30 transition-colors border border-gray-700 hover:border-cyan-500/40 disabled:opacity-50 disabled:cursor-not-allowed"
+                            disabled={activeStreamIndex === streams.length - 1}
+                        >
+                            <ChevronRight className="h-5 w-5 text-cyan-400" />
+                        </button>
+                    </div>
+                </div>
 
-                                    <div className="relative">
-                                        <div
-                                            className="h-48 bg-cover bg-center"
-                                            style={{ backgroundImage: `url(${stream.thumbnail})` }}
-                                        />
-                                        <div className="absolute inset-0 flex items-center justify-center">
-                                            <div className="w-16 h-16 rounded-full bg-cyan-600/80 flex items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.8)] border border-cyan-400/50">
-                                                <Play className="h-8 w-8 text-white" />
+                {/* Carousel/Slider */}
+                <div className="overflow-hidden">
+                    <div
+                        className="flex transition-transform duration-500 ease-in-out"
+                        style={{ transform: `translateX(-${activeStreamIndex * 100}%)` }}
+                    >
+                        {streams.map((stream) => (
+                            <div key={stream.id} className="min-w-full">
+                                <div className="bg-gray-900/60 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-800 hover:border-cyan-500/40 transition-all duration-300">
+                                    <div className="flex flex-col lg:flex-row">
+                                        {/* Stream Thumbnail Section */}
+                                        <div className="lg:w-1/2 relative overflow-hidden">
+                                            <motion.div
+                                                whileHover={{ scale: 1.05 }}
+                                                transition={{ duration: 0.6 }}
+                                                className="h-64 lg:h-full w-full relative"
+                                            >
+                                                <div
+                                                    className="absolute inset-0 bg-cover bg-center"
+                                                    style={{ backgroundImage: `url(${stream.thumbnail})` }}
+                                                ></div>
+                                                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/80 opacity-80 lg:block hidden"></div>
+                                                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 opacity-80 lg:hidden"></div>
+
+                                                {/* Live Badge */}
+                                                <div className="absolute top-4 left-4 bg-red-500/80 backdrop-blur-md text-white px-4 py-2 rounded-lg text-lg font-bold border border-red-400/30 animate-pulse">
+                                                    LIVE
+                                                </div>
+                                                
+                                                {/* Play button overlay */}
+                                                <div className="absolute inset-0 flex items-center justify-center">
+                                                    <div className="w-16 h-16 rounded-full bg-cyan-600/80 flex items-center justify-center shadow-lg border border-cyan-400/50 hover:bg-cyan-500/90 transition-all duration-300">
+                                                        <Play className="h-8 w-8 text-white" />
+                                                    </div>
+                                                </div>
+                                            </motion.div>
+                                        </div>
+
+                                        {/* Stream Details Section */}
+                                        <div className="lg:w-1/2 p-6 lg:p-8">
+                                            <h3 className="text-2xl font-bold mb-4 text-white">{stream.name}</h3>
+
+                                            {/* Stream stats with icons */}
+                                            <div className="grid grid-cols-2 gap-4 mb-6">
+                                                <div className="flex items-center">
+                                                    <Users className="w-5 h-5 mr-2 text-cyan-400" />
+                                                    <div>
+                                                        <p className="text-xs text-gray-400">Viewers</p>
+                                                        <p className="font-medium text-white">{stream.viewers}</p>
+                                                    </div>
+                                                </div>
+
+                                                <div className="flex items-center">
+                                                    <div className="w-5 h-5 mr-2 bg-cyan-500 rounded-sm flex items-center justify-center">
+                                                        <span className="text-xs font-bold text-black">G</span>
+                                                    </div>
+                                                    <div>
+                                                        <p className="text-xs text-gray-400">Game</p>
+                                                        <p className="font-medium text-white">{stream.game}</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="absolute top-3 right-3 bg-red-500 text-white px-3 py-1 rounded text-sm font-bold animate-pulse border border-red-400/50 shadow-[0_0_10px_rgba(239,68,68,0.5)]">
-                                            LIVE
-                                        </div>
-                                        <div className="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded text-sm border border-gray-500/30 backdrop-blur-sm">
-                                            {stream.game}
+
+                                            {/* Duration info */}
+                                            <div className="mb-6">
+                                                <p className="text-sm text-gray-400 mb-2">Stream Duration</p>
+                                                <div className="flex items-center space-x-3">
+                                                    <p className="font-medium text-cyan-400">{stream.duration}</p>
+                                                </div>
+                                            </div>
+
+                                            {/* Watch stream button */}
+                                            <Link
+                                                to={`/stream/${stream.id}`}
+                                                className="inline-flex items-center px-5 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-medium transition-all duration-300 group"
+                                            >
+                                                Watch Stream
+                                                <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                                            </Link>
                                         </div>
                                     </div>
-                                    <div className="p-4">
-                                        <h3 className="text-lg font-semibold mb-3 text-white tracking-wide">{stream.name}</h3>
-                                        <div className="flex items-center justify-between">
-                                            <div className="flex items-center text-cyan-300 bg-cyan-900/30 px-3 py-1 rounded border border-cyan-500/30">
-                                                <Users className="h-4 w-4 mr-2" />
-                                                {stream.viewers} viewers
-                                            </div>
-                                            <span className="text-cyan-300 text-sm bg-cyan-900/30 px-3 py-1 rounded border border-cyan-500/30">{stream.duration}</span>
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            </Link>
-                        </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Pagination indicators */}
+                <div className="flex justify-center mt-8 space-x-2">
+                    {streams.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={(event) => { 
+                                event.stopPropagation();
+                                setActiveStreamIndex(index)
+                            }}
+                            className={`h-2 rounded-full transition-all ${activeStreamIndex === index
+                                ? 'w-8 bg-cyan-500'
+                                : 'w-2 bg-gray-700 hover:bg-gray-600'
+                                }`}
+                            aria-label={`Go to slide ${index + 1}`}
+                        />
                     ))}
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default LiveStreams
+export default LiveStreams;

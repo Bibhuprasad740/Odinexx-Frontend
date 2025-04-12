@@ -1,31 +1,37 @@
 const events = [
     {
         id: 1,
-        title: 'Spring Championship 2024',
-        game: 'League of Legends',
-        date: 'March 15, 2024',
-        prizePool: '$10,000',
-        participants: '32 teams',
-        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=2940',
+        title: 'Valorant Championship',
+        game: 'Valorant',
+        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1000',
+        date: 'April 15-17, 2025',
+        prizePool: '$50,000 Prize Pool',
+        participants: '32 Teams',
+        location: 'Los Angeles, CA',
+        registrationStatus: 'Open'
     },
     {
         id: 2,
-        title: 'Battle Royale Masters',
-        game: 'PUBG Mobile',
-        date: 'March 20, 2024',
-        prizePool: '$5,000',
-        participants: '100 players',
-        image: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=2940',
+        title: 'League Masters Tournament',
+        game: 'League of Legends',
+        image: 'https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&q=80&w=1000',
+        date: 'May 8-10, 2025',
+        prizePool: '$75,000 Prize Pool',
+        participants: '16 Teams',
+        location: 'New York, NY',
+        registrationStatus: 'Open'
     },
     {
         id: 3,
-        title: 'FPS Pro League',
-        game: 'Valorant',
-        date: 'April 1, 2024',
-        prizePool: '$15,000',
-        participants: '16 teams',
-        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=2940',
-    },
+        title: 'CS:GO Elite Challenge',
+        game: 'Counter-Strike 2',
+        image: 'https://images.unsplash.com/photo-1594919127564-005c85bd74c3?auto=format&fit=crop&q=80&w=1000',
+        date: 'June 22-24, 2025',
+        prizePool: '$100,000 Prize Pool',
+        participants: '24 Teams',
+        location: 'Berlin, Germany',
+        registrationStatus: 'Coming Soon'
+    }
 ];
 
 export default events;

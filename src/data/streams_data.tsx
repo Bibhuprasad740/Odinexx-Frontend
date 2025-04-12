@@ -2,7 +2,7 @@ const streams = [
     {
         id: 1,
         name: "VALORANT Championship Finals",
-        thumbnail: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=2940",
+        thumbnail: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=2940",
         viewers: "125K",
         game: "VALORANT",
         duration: "6 HOURS",
@@ -18,7 +18,7 @@ const streams = [
     {
         id: 3,
         name: "CS:GO Major Tournament",
-        thumbnail: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=2940",
+        thumbnail: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=2940",
         viewers: "80K",
         game: "CS:GO",
         duration: "4 HOURS",
