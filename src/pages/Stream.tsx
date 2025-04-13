@@ -36,7 +36,7 @@ const Stream = () => {
             >
               <div className="aspect-video">
                 <iframe
-                  src="assets/graphics3.gif"
+                  src={"/static/graphics3.gif"}
                   title="Live Stream"
                   className="w-full h-full"
                   allowFullScreen

@@ -7,7 +7,7 @@ const Features = () => {
         <div className="w-full mx-auto relative py-16">
             {/* Background gif */}
             <img
-                src='/assets/graphics6.gif'
+                src={"/static/graphics6.gif"}
                 className="absolute top-0 left-0 w-full h-full object-cover filter blur-lg md:opacity-10 opacity-20"
             >
             </img>

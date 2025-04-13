@@ -11,6 +11,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import CreateTournament from './pages/CreateTournament';
+import AboutUs from './pages/AboutUs';
 // import { useRegisterSW } from 'virtual:pwa-register/react';
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/createTournament" element={<CreateTournament />} />
+          <Route path="/about" element={<AboutUs />} />
         </Routes>
         <Toaster position="top-right" />
       </div>

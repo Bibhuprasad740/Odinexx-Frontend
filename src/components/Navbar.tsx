@@ -19,6 +19,7 @@ const NavBar = () => {
     { name: 'Teams', path: '/teams' },
     { name: 'Leaderboard', path: '/leaderboard' },
     { name: 'Stream', path: '/stream' },
+    { name: 'About Us', path: '/about' },
     { name: 'Login', path: '/login' },
   ];
 

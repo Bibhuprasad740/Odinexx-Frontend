@@ -37,6 +37,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        saffron: {
+          400: '#FF9933',
+          500: '#FF8C00',
+          600: '#FF7F00'
+        }
       },
       keyframes: {
         "accordion-down": {

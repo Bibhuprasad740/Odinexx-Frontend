@@ -7,7 +7,7 @@ const CallToAction = () => {
         <div className="w-full py-16 bg-gradient-to-b from-gray-900/80 to-gray-900/50 relative overflow-hidden">
             {/* Background gif */}
             <img
-                src='/assets/graphics4.gif'
+                src={"/static/graphics4.gif"}
                 className="absolute top-0 left-0 w-full h-full object-cover filter blur-lg md:opacity-10 opacity-20"
             >
             </img>
