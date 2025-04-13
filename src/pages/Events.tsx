@@ -5,17 +5,12 @@ import events from '../data/events_data';
 const Events = () => {
   return (
     <div className="w-full mx-auto relative py-16">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute h-full top-0 left-0 object-cover filter blur-lg opacity-10"
+      {/* Background gif */}
+      <img
+        src='/assets/graphics1.gif'
+        className="absolute top-0 left-0 w-full h-full object-cover filter blur-lg md:opacity-10 opacity-20"
       >
-        <source src="/assets/graphics1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      </img>
       <div className="max-w-7xl mt-4 mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <motion.div

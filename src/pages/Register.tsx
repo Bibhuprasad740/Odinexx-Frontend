@@ -25,17 +25,12 @@ const Register = () => {
 
   return (
     <div className="w-full mx-auto relative py-16 min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover filter blur-lg md:opacity-10 opacity-20"
+      {/* Background gif */}
+      <img
+        src='/assets/graphics5.gif'
+        className="absolute top-0 left-0 w-full h-full object-cover filter blur-lg md:opacity-10 opacity-40"
       >
-        <source src="/assets/graphics5.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      </img>
       <div className="max-w-7xl mt-4 mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -64,7 +59,7 @@ const Register = () => {
             transition={{ delay: 0.1 }}
             className="w-full md:w-1/2 max-w-md"
           >
-            <form 
+            <form
               onSubmit={handleSubmit}
               className="bg-gray-900/60 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-800 hover:border-cyan-500/40 transition-all duration-300 p-8 space-y-6"
             >
@@ -164,8 +159,8 @@ const Register = () => {
               {/* Footer Links */}
               <div className="text-center text-sm text-gray-400">
                 <span className="text-cyan-300">Already have an account? </span>
-                <Link 
-                  to="/login" 
+                <Link
+                  to="/login"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
                 >
                   Sign in now

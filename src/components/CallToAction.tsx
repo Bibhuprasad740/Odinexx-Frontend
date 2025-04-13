@@ -5,17 +5,12 @@ import { Link } from 'react-router-dom';
 const CallToAction = () => {
     return (
         <div className="w-full py-16 bg-gradient-to-b from-gray-900/80 to-gray-900/50 relative overflow-hidden">
-            {/* Background Video */}
-            <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute top-0 left-0 w-full h-full object-cover filter blur-lg md:opacity-15 opacity-10"
+            {/* Background gif */}
+            <img
+                src='/assets/graphics4.gif'
+                className="absolute top-0 left-0 w-full h-full object-cover filter blur-lg md:opacity-10 opacity-20"
             >
-                <source src="/assets/graphics4.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
+            </img>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

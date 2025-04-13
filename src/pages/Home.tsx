@@ -7,6 +7,7 @@ import Features from '../components/Features';
 import HeroSection from '../components/HeroSection';
 import StatsCounter from '../components/StatsCounter';
 import CallToAction from '../components/CallToAction';
+import TournamentBrackets from '../components/TournamentBrackets';
 
 const Home = () => {
 

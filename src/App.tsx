@@ -10,6 +10,7 @@ import Stream from './pages/Stream';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
+import CreateTournament from './pages/CreateTournament';
 // import { useRegisterSW } from 'virtual:pwa-register/react';
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/createTournament" element={<CreateTournament />} />
         </Routes>
         <Toaster position="top-right" />
       </div>

@@ -5,17 +5,12 @@ import features from '../data/features_data'
 const Features = () => {
     return (
         <div className="w-full mx-auto relative py-16">
-            {/* Background Video */}
-            <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute top-0 left-0 w-full h-full object-cover filter blur-lg md:opacity-20 opacity-15"
+            {/* Background gif */}
+            <img
+                src='/assets/graphics6.gif'
+                className="absolute top-0 left-0 w-full h-full object-cover filter blur-lg md:opacity-10 opacity-20"
             >
-                <source src="/assets/graphics6.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
+            </img>
             {/* Section header with matching design */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}

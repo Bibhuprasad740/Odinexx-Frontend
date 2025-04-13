@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { MessageCircle, Users, Star, Share2, Trophy, Clock, Calendar, ArrowRight } from 'lucide-react';
+import TournamentBrackets from '../components/TournamentBrackets';
 
 const Stream = () => {
   return (
@@ -7,7 +8,7 @@ const Stream = () => {
 
       <div className="max-w-7xl mx-auto relative">
         {/* Header section */}
-        <motion.div 
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +36,7 @@ const Stream = () => {
             >
               <div className="aspect-video">
                 <iframe
-                  src="assets/graphics3.mp4"
+                  src="assets/graphics3.gif"
                   title="Live Stream"
                   className="w-full h-full"
                   allowFullScreen
@@ -117,6 +118,10 @@ const Stream = () => {
           </motion.div>
         </div>
 
+        <div className="overflow-x-auto md:px-8 py-20">
+          <TournamentBrackets />
+        </div>
+
         {/* Tournament info */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -173,11 +178,10 @@ const Stream = () => {
                       </div>
                       <div className="flex items-center gap-3">
                         <span className="text-gray-400 text-sm">{item.time}</span>
-                        <span className={`px-2 py-1 rounded text-xs font-medium ${
-                          item.status === 'Live Now' ? 'bg-green-900/30 text-green-400 border border-green-500/30' :
+                        <span className={`px-2 py-1 rounded text-xs font-medium ${item.status === 'Live Now' ? 'bg-green-900/30 text-green-400 border border-green-500/30' :
                           item.status === 'Completed' ? 'bg-gray-800/30 text-gray-400 border border-gray-600/30' :
-                          'bg-cyan-900/30 text-cyan-400 border border-cyan-500/30'
-                        }`}>
+                            'bg-cyan-900/30 text-cyan-400 border border-cyan-500/30'
+                          }`}>
                           {item.status}
                         </span>
                       </div>

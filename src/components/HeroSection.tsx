@@ -5,17 +5,12 @@ import { Link } from 'react-router-dom';
 const HeroSection = () => {
     return (
         <div className="relative w-full overflow-hidden min-h-screen flex items-center justify-center">
-            {/* Background Video */}
-            <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute top-0 left-0 w-full h-full object-cover filter blur-lg md:opacity-20 opacity-10"
+            {/* Background gif */}
+            <img
+                src='/assets/graphics1.gif'
+                className="absolute top-0 left-0 w-full h-full object-cover filter blur-lg md:opacity-10 opacity-20"
             >
-                <source src="/assets/graphics1.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
+            </img>
 
             {/* Main content */}
             <div className="relative z-10 max-w-7xl mt-8 mx-auto px-4 sm:px-6 lg:px-8 w-full py-16">
