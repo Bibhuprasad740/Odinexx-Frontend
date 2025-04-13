@@ -57,37 +57,37 @@ const AboutUs = () => {
         {
             name: "NVIDIA",
             tier: "Platinum",
-            logo: "/assets/sponsors/nvidia.svg",
+            logo: "/static/sponsors/nvidia.svg",
             description: "Global technology leader powering our tournament infrastructure."
         },
         {
             name: "Razer",
             tier: "Platinum",
-            logo: "/assets/sponsors/razer.svg",
+            logo: "/static/sponsors/razer.svg",
             description: "Premium gaming hardware for professional players."
         },
         {
             name: "Red Bull",
             tier: "Gold",
-            logo: "/assets/sponsors/redbull.svg",
+            logo: "/static/sponsors/redbull.svg",
             description: "The official energy drink of Odinexx tournaments."
         },
         {
             name: "Intel",
             tier: "Gold",
-            logo: "/assets/sponsors/intel.svg",
+            logo: "/static/sponsors/intel.svg",
             description: "The official processor of Odinexx tournaments."
         },
         {
             name: "Logitech",
             tier: "Silver",
-            logo: "/assets/sponsors/logitech.svg",
+            logo: "/static/sponsors/logitech.svg",
             description: "Providing us with the next generation computing power."
         },
         {
             name: "MSI",
             tier: "Silver",
-            logo: "/assets/sponsors/msi.svg",
+            logo: "/static/sponsors/msi.svg",
             description: "Creating next-gen tools for competitive gamers."
         }
     ];
@@ -206,7 +206,7 @@ const AboutUs = () => {
                                         <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-green-500 rounded-xl blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
                                         <div className="w-40 h-40 bg-gray-800 rounded-xl border border-gray-700 overflow-hidden relative flex items-center justify-center p-4">
                                             <img
-                                                src="/assets/indian_govt_logo.jpeg"
+                                                src="/static/indian_govt_logo.jpeg"
                                                 alt="Government of India"
                                                 className="w-full h-full object-contain"
                                             />
@@ -216,7 +216,7 @@ const AboutUs = () => {
                                         <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl blur-md opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
                                         <div className="w-40 h-40 bg-gray-800 rounded-xl border border-gray-700 overflow-hidden relative flex items-center justify-center p-4">
                                             <img
-                                                src="/assets/bjp_logo.png"
+                                                src="/static/bjp_logo.png"
                                                 alt="Bharatiya Janata Party"
                                                 className="w-full h-full object-contain"
                                             />
@@ -230,7 +230,7 @@ const AboutUs = () => {
                                         <div className="absolute inset-0 bg-gradient-to-br from-orange-400/30 to-blue-500/30 rounded-xl blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
                                         <div className="w-48 h-48 md:w-56 md:h-56 bg-gray-800 rounded-xl border-2 border-orange-500/30 overflow-hidden relative">
                                             <img
-                                                src="/assets/narendra_modi.png"
+                                                src="/static/narendra_modi.png"
                                                 alt="Prime Minister Narendra Modi"
                                                 className="w-full h-full object-cover"
                                             />
